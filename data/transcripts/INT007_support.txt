@@ -1,0 +1,13 @@
+# Interview INT007
+participant: P-7120 — Office Manager, dental group (5 locations)
+date: 2026-02-19
+product: Northwind (expense + invoicing platform)
+duration_min: 24
+---
+[00:26] Interviewer: How has support been when something breaks?
+[00:35] P-7120: Slow. The median reply is a day and a half, and the first reply is almost always a link to a help article I've already read. I have to prove I read it before I get a human.
+[02:40] P-7120: When payroll-adjacent expenses are stuck, a day and a half is an eternity. I had reimbursements frozen for a week because a sync error needed someone on their side to clear it, and the queue just sat.
+[04:55] Interviewer: Did support issues change how you feel about the product?
+[05:03] P-7120: It's the thing most likely to make us leave, honestly. The software is fine. The feeling of being stranded when it hiccups is what wears you down. I don't need 24/7. I need a human within a few hours when money is stuck.
+[07:10] P-7120: A status page would help too. When the sync was down I had no idea if it was me or them. I filed three tickets for one outage because I couldn't tell.
+[08:48] P-7120: Fix the response time on money-blocking issues and add a status page. That's the difference between me renewing and me shopping around.

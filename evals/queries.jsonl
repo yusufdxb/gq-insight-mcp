@@ -1,0 +1,10 @@
+{"id": "Q1", "query": "What makes onboarding and initial setup hard for new customers?", "relevant": ["INT001", "INT003"]}
+{"id": "Q2", "query": "Concerns or surprises about pricing and cost", "relevant": ["INT002", "INT005"]}
+{"id": "Q3", "query": "Which third-party integrations do customers want?", "relevant": ["INT004"]}
+{"id": "Q4", "query": "Why do customers churn or switch to a competitor?", "relevant": ["INT005", "INT007"]}
+{"id": "Q5", "query": "Problems with the mobile app and receipt capture", "relevant": ["INT003"]}
+{"id": "Q6", "query": "Security, SSO, or compliance blockers to a rollout", "relevant": ["INT008"]}
+{"id": "Q7", "query": "How do customers feel about customer support response times?", "relevant": ["INT007"]}
+{"id": "Q8", "query": "What do long-time power users value most?", "relevant": ["INT006"]}
+{"id": "Q9", "query": "Requests for better reporting and analytics", "relevant": ["INT005", "INT006"]}
+{"id": "Q10", "query": "Frustrations with QuickBooks or accounting sync", "relevant": ["INT004"]}

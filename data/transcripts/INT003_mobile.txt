@@ -1,0 +1,14 @@
+# Interview INT003
+participant: P-3387 — Field Sales Rep, industrial equipment (travels 3 weeks/month)
+date: 2026-02-09
+product: Northwind (expense + invoicing platform)
+duration_min: 22
+---
+[00:29] Interviewer: You live on the road. How does the mobile app hold up?
+[00:41] P-3387: It's where the product falls apart for me. I take a photo of a receipt and half the time the OCR grabs the wrong total — it reads the subtotal instead of the total with tax.
+[02:14] P-3387: And there's no offline mode. I'm in a client's basement with no signal, I snap ten receipts, and the app just spins. By the time I'm back online I've lost track of which expense was which.
+[04:33] Interviewer: What about the onboarding on mobile specifically?
+[04:40] P-3387: The setup assumed I was at a desk. The mobile signup made me create approval rules on a four-inch screen. I gave up and waited until I got home to a laptop.
+[06:50] P-3387: The desktop version is genuinely good. But I'm never at a desk. Ninety percent of my expenses happen on my phone and that's the ten percent of the product that got the least love.
+[08:20] Interviewer: One fix?
+[08:26] P-3387: Offline capture that syncs later, and OCR that knows the difference between subtotal and total. Those two things and I'd stop complaining.

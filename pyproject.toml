@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gq-insight-mcp"
+version = "0.1.0"
+description = "MCP server for semantic search + grounded answering over customer-research interviews, with a built-in eval harness."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Yusuf Guenena", email = "yusuf.a.guenena@gmail.com" }]
+dependencies = [
+    "mcp>=1.2",
+    "sentence-transformers>=2.2",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+gq-insight = "gq_insight.cli:main"
+gq-insight-server = "gq_insight.server:main"
+gq-insight-eval = "gq_insight.eval:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

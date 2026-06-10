@@ -1,0 +1,14 @@
+# Interview INT006
+participant: P-6675 — Accounting Ops Lead, agency (power user, 2 years)
+date: 2026-02-17
+product: Northwind (expense + invoicing platform)
+duration_min: 33
+---
+[00:30] Interviewer: You're one of the heaviest users we have. What keeps you here?
+[00:42] P-6675: The automation rules. I built a rule engine that auto-categorizes about eighty percent of our expenses by merchant and amount. What used to be a Monday-morning slog is now mostly done before I sit down.
+[02:48] P-6675: The receipt matching is also underrated. It pairs card transactions to receipts automatically, and when it can't, it flags exactly what's missing instead of making me hunt.
+[05:02] Interviewer: Where does it still frustrate you?
+[05:10] P-6675: Reporting. I adore the capture side and I'm stuck doing exports for anything beyond a basic summary. I've heard other people churn over this and I understand why, even though the automation keeps me loyal.
+[07:25] P-6675: And I wish the rules engine had version history. I tweak a rule, it misfires, and I can't see what I changed. For something this powerful, an undo would go a long way.
+[09:40] Interviewer: If you were pitching Northwind to a peer, what's the one line?
+[09:47] P-6675: "It does the boring 80 percent for you." That's the whole value. The automation is the moat — they should lean into it and fix reporting before someone out-automates them.

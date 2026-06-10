@@ -1,0 +1,14 @@
+# Interview INT004
+participant: P-4501 — Controller, professional services firm (75 employees)
+date: 2026-02-11
+product: Northwind (expense + invoicing platform)
+duration_min: 35
+---
+[00:33] Interviewer: What does Northwind need to talk to for your workflow to feel complete?
+[00:46] P-4501: QuickBooks, first and foremost. The sync exists but it's one-directional. Expenses flow into QuickBooks fine, but if I fix a category in QuickBooks it doesn't flow back, so the two systems drift apart by month end.
+[02:58] P-4501: Second is Slack. I want approvals to land in Slack so managers approve from where they already are. Right now every approval is an email, and emails get buried.
+[05:10] Interviewer: Anything else on the integration wish list?
+[05:18] P-4501: A real API. There's a webhook for "expense created" and that's basically it. I can't pull a clean report of approved expenses programmatically, which means I'm exporting CSVs by hand every Friday.
+[07:44] P-4501: Bidirectional QuickBooks sync would save me a full day a month. That's the one I'd pay extra for.
+[09:30] Interviewer: How does the lack of integrations affect your view of the product?
+[09:39] P-4501: It makes it feel like an island. Good island, but I have to row a boat to it every week. Finance tools win by disappearing into the stack you already use.

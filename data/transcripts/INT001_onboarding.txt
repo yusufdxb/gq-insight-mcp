@@ -1,0 +1,16 @@
+# Interview INT001
+participant: P-1042 — Operations Lead, mid-market logistics (118 employees)
+date: 2026-02-03
+product: Northwind (expense + invoicing platform)
+duration_min: 31
+---
+[00:38] Interviewer: Walk me through the first week after you signed up.
+[00:52] P-1042: Honestly the first week was rough. We signed the contract on a Monday and I assumed we'd be live by Friday. It took almost three weeks before finance was actually using it.
+[01:40] Interviewer: What ate up that time?
+[01:51] P-1042: Setup. Importing our chart of accounts was manual, row by row. There was no CSV mapping step, so someone on my team retyped a couple hundred categories. That alone burned two days.
+[03:12] P-1042: And the approval rules. We have a three-tier approval chain and the setup wizard only let me configure one approver. I had to file a support ticket just to learn that multi-tier lived in a different settings page nobody linked to.
+[05:01] Interviewer: Did you consider giving up during that stretch?
+[05:09] P-1042: I thought about it. If my CFO hadn't already announced the switch company-wide, I might have rolled back. The product is good once it's running. Getting it running is the problem.
+[07:22] P-1042: One more thing — there was no sandbox. I couldn't test the workflow without it hitting real accounting data, so I was nervous about every click.
+[09:03] Interviewer: If you could fix one thing about onboarding, what would it be?
+[09:11] P-1042: A guided importer. Show me my old data, let me map columns, preview it, then commit. That's table stakes for finance tools and it just wasn't there.

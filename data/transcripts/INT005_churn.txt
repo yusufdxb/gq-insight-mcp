@@ -1,0 +1,14 @@
+# Interview INT005
+participant: P-5093 — VP Finance, e-commerce (former customer, churned)
+date: 2026-02-13
+product: Northwind (expense + invoicing platform)
+duration_min: 29
+---
+[00:27] Interviewer: You left Northwind last quarter. What pushed you out?
+[00:39] P-5093: Reporting, mostly. I could capture expenses beautifully but I couldn't answer my CEO's questions from them. There was no way to slice spend by department and vendor at the same time. Every board prep turned into a spreadsheet export.
+[02:51] P-5093: The competitor we moved to isn't prettier, but it has a real reporting builder. I can answer "what did marketing spend on software in Q3" in ten seconds. In Northwind that was a thirty-minute export-and-pivot ritual.
+[05:14] Interviewer: Was price part of it?
+[05:20] P-5093: Price was the second reason. Our bill kept climbing as we added submitters, and I couldn't justify paying more for a tool I had to export out of anyway. If the reporting had been there, I'd have swallowed the price.
+[07:33] Interviewer: Did anything almost make you stay?
+[07:40] P-5093: The automation rules were genuinely good, and switching cost me three weeks. But "good capture, weak reporting" is a fatal combination for a finance leader. We don't get judged on capture. We get judged on the answers we hand upstairs.
+[09:58] P-5093: Tell them this: the data was all in there. They just never gave me a way to ask it questions.

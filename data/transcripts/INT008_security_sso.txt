@@ -1,0 +1,14 @@
+# Interview INT008
+participant: P-8344 — IT Director, regional healthcare network (900 employees)
+date: 2026-02-24
+product: Northwind (expense + invoicing platform)
+duration_min: 38
+---
+[00:34] Interviewer: You paused a company-wide rollout. What stopped it?
+[00:45] P-8344: SSO. We mandate SAML single sign-on for anything that touches employee data, and Northwind's SSO is gated behind the enterprise tier at a price jump we couldn't justify for a tool we were still piloting.
+[03:02] P-8344: Security can't be a paywall for us. In healthcare, SSO and audit logs aren't premium features, they're the cost of entry. The moment SSO is "talk to sales," I have to assume the security posture is an afterthought.
+[05:30] Interviewer: Beyond SSO, any other blockers?
+[05:38] P-8344: Audit logging was thin. I need to know who approved what and when, exportable, immutable. What's there is a basic activity feed, not an audit trail I could hand a compliance officer.
+[07:55] P-8344: And data residency. I asked where the data lives and got a vague answer. For us that's a hard gate, not a nice-to-have.
+[10:12] Interviewer: What would unblock the rollout tomorrow?
+[10:20] P-8344: SSO in the tier we're already on, a real exportable audit log, and a straight answer on data residency. Give me those three and I sign for all 900 seats this quarter.

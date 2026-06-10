@@ -1,0 +1,14 @@
+# Interview INT002
+participant: P-2210 — Finance Manager, SaaS startup (40 employees)
+date: 2026-02-05
+product: Northwind (expense + invoicing platform)
+duration_min: 27
+---
+[00:31] Interviewer: How did pricing factor into your decision?
+[00:44] P-2210: The headline price looked great. Twelve dollars a seat, fine. What I didn't catch was that "seat" means anyone who submits an expense, not just admins. So overnight our seat count went from four to thirty-one.
+[02:05] Interviewer: Were you surprised by the bill?
+[02:11] P-2210: Blindsided. The first invoice was almost four times what I'd modeled. Nobody on sales walked me through how seats were counted, and the pricing page was vague about it.
+[04:18] P-2210: I get that submitters cost money, but charge me a cheaper submitter tier then. An employee who files one receipt a month should not cost the same as my controller who lives in the tool.
+[06:40] Interviewer: Did you consider leaving over it?
+[06:48] P-2210: I escalated. They gave us a one-time credit, which helped, but it left a bad taste. Pricing surprises erode trust faster than a missing feature does.
+[08:55] P-2210: If the pricing page had one honest sentence — "you pay per person who submits" — I'd have planned for it and we'd be fine. It's the surprise that stings, not the number.
