@@ -8,9 +8,9 @@ The guiding rule: an answer may only assert what a retrieved quote supports, eve
 
 ## Demo
 
-[![gq-insight demo](assets/demo-thumb.png)](assets/gq-insight-demo.mp4)
+[![gq-insight demo](https://img.youtube.com/vi/6DO9KrHUwWk/maxresdefault.jpg)](https://youtu.be/6DO9KrHUwWk)
 
-*A 65-second narrated walkthrough: semantic search, a grounded cited answer, and the live eval scorecard. (`assets/gq-insight-demo.mp4`)*
+*A narrated walkthrough: semantic search, a grounded cited answer, and the live eval scorecard. ([watch on YouTube](https://youtu.be/6DO9KrHUwWk))*
 
 ## What it does
 
