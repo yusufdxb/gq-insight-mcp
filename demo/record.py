@@ -48,24 +48,33 @@ ORANGE = (240, 136, 62)
 MARGIN = 64
 LINE_H = 30
 FONT_SIZE = 19
-VOICE = "am_michael"
+VOICE = "bm_george"  # British male
+LANG = "b"           # British English
+SPEED = 1.2          # a touch quicker than default
 
 # ---- narration (spoken, scene by scene) ----
 NARR = {
-    "intro": "This is gee-cue insight. An MCP server for semantic search and "
-             "grounded answering over customer-research interviews, with its own "
-             "evaluation harness.",
-    "search": "Ask it why customers churn, and it returns the actual quotes. Each "
-              "one traceable to an interview, a timestamp, and a speaker. No "
-              "summary you can't check.",
-    "answer": "Ask a real research question and it answers straight from the "
-              "interviews. Every claim carries a citation, and if it can't ground "
-              "a claim in a real quote, it refuses rather than make one up.",
-    "eval": "And because tools like this need quality measures, it ships an eval "
-            "harness. Recall, mean reciprocal rank, and a faithfulness rate, all "
-            "gated in continuous integration.",
-    "outro": "Semantic search, citation-grounded answers, and evals you can "
-             "trust. It runs offline. The code is on my GitHub.",
+    "intro": "This is gee-cue insight, a Model Context Protocol server for "
+             "customer-research interviews. Every speaker turn is embedded with a "
+             "sentence-transformer and indexed for cosine search, so an agent can "
+             "query the whole corpus through a handful of typed tools.",
+    "search": "Ask why customers churn. It scores the query against the "
+              "embeddings and returns the closest verbatim turns, each one keeping "
+              "its provenance: the interview, the timestamp, and the speaker. "
+              "Interviewer turns are indexed for context but filtered from the "
+              "results. You want what the customer said, not the moderator's prompt.",
+    "answer": "For a question, it retrieves the top turns and writes an answer "
+              "where every claim is followed by a citation. Before returning, a "
+              "faithfulness check confirms each citation maps to a turn that was "
+              "actually retrieved. If a claim can't be grounded, the answer is "
+              "refused rather than invented. A local model can synthesise the "
+              "prose under the same check, with a deterministic fallback.",
+    "eval": "Quality is measured, not assumed. A labelled query set scores recall "
+            "at k, mean reciprocal rank, and normalised discounted cumulative "
+            "gain, alongside the faithfulness rate. Conservative thresholds gate "
+            "it in continuous integration, so a regression fails the build.",
+    "outro": "Semantic search, grounded answers, and evaluation you can trust, "
+             "exposed as MCP tools and runnable offline. The code is on my GitHub.",
 }
 
 
@@ -179,11 +188,11 @@ def synth_all(audio_dir: Path) -> dict[str, float] | None:
         print(f"[voice] TTS unavailable ({e}); rendering silent.", file=sys.stderr)
         return None
     audio_dir.mkdir(parents=True, exist_ok=True)
-    pipe = KPipeline(lang_code="a")
+    pipe = KPipeline(lang_code=LANG)
     durs: dict[str, float] = {}
     for key, text in NARR.items():
         chunks = []
-        for _, _, audio in pipe(text, voice=VOICE):
+        for _, _, audio in pipe(text, voice=VOICE, speed=SPEED):
             a = audio.detach().cpu().numpy() if hasattr(audio, "detach") else np.asarray(audio)
             chunks.append(a)
         wav = np.concatenate(chunks).astype(np.float32)
