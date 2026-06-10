@@ -2,13 +2,9 @@
 
 **Semantic search and grounded answering over customer-research interviews, exposed as an MCP server, with a built-in evaluation harness.**
 
-Built for [Great Question](https://greatquestion.co)'s AI engineering internship. It deliberately implements three things straight from the job description:
+Customer interviews pile up faster than anyone can read them. The insights are in there; getting an answer out usually means a manual export-and-skim. `gq-insight` turns a pile of interview transcripts into something an LLM agent can query directly: ask a question, get back the actual quotes that answer it, each one traceable to an interview, a timestamp, and a speaker.
 
-- **Semantic search across interview hours** — embed every interview turn, retrieve the most relevant verbatim quotes, each traceable to an interview, timestamp, and speaker.
-- **MCP tool structuring** — the search, answer, and eval capabilities are exposed as Model Context Protocol tools any LLM agent can call.
-- **Evals and quality measures across MCP tools** — a labeled query set scored on recall@k, MRR, nDCG, and answer-**faithfulness**, gated in CI.
-
-> The guiding rule: an answer may only assert what a retrieved quote supports, every claim carries a citation, and an answer that cannot be grounded is **refused, not fabricated**. Agentic research tooling is bottlenecked on faithfulness, not fluency.
+The guiding rule: an answer may only assert what a retrieved quote supports, every claim carries a citation, and an answer that cannot be grounded is **refused, not fabricated**. Research tooling is only useful if every answer is traceable to source.
 
 ## Demo
 
@@ -33,6 +29,12 @@ $ gq-insight eval
 recall@k 0.900 · MRR 0.790 · nDCG@k 0.837 · faithfulness 1.000 · ALL GATES PASS
 ```
 
+Three capabilities, each an MCP tool an agent can call:
+
+- **Semantic search** over interview transcripts, returning verbatim cited quotes.
+- **Grounded answering**: a question in, a cited answer out, with every claim verified against a retrieved quote before it is returned.
+- **A live eval harness**: retrieval and answer quality scored on a labeled set and gated in CI, so the tools are measurable, not vibes.
+
 ## How it works
 
 ```
@@ -50,7 +52,7 @@ data/transcripts/*.txt   8 customer interviews, parsed into citable speaker turn
                          list_themes, run_eval
 ```
 
-The corpus here is 8 interviews; the retrieval contract is unchanged when you swap the exact cosine search for an approximate index (FAISS/HNSW) at "tens of thousands of hours."
+The corpus here is 8 interviews; the retrieval contract is unchanged when you swap the exact cosine search for an approximate index (FAISS/HNSW) at tens of thousands of hours.
 
 ## Quickstart
 
@@ -74,7 +76,7 @@ gq-insight-server      # stdio transport
 Register it with any MCP client (Claude Desktop, an agent runtime) to give the agent
 `search_interviews`, `answer_with_citations`, `list_themes`, and `run_eval` tools.
 
-## Evaluation (honest numbers)
+## Evaluation
 
 On a 10-query labeled set (`evals/queries.jsonl`), all-MiniLM-L6-v2, k=6:
 

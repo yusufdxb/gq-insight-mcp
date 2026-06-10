@@ -52,9 +52,9 @@ VOICE = "am_michael"
 
 # ---- narration (spoken, scene by scene) ----
 NARR = {
-    "intro": "This is gee-cue insight. An MCP server I built for Great Question "
-             "that does semantic search and grounded answering over customer "
-             "interviews, with its own evaluation harness.",
+    "intro": "This is gee-cue insight. An MCP server for semantic search and "
+             "grounded answering over customer-research interviews, with its own "
+             "evaluation harness.",
     "search": "Ask it why customers churn, and it returns the actual quotes. Each "
               "one traceable to an interview, a timestamp, and a speaker. No "
               "summary you can't check.",
@@ -64,9 +64,8 @@ NARR = {
     "eval": "And because tools like this need quality measures, it ships an eval "
             "harness. Recall, mean reciprocal rank, and a faithfulness rate, all "
             "gated in continuous integration.",
-    "outro": "Semantic search, MCP tool structuring, and evals across MCP tools. "
-             "Three things straight from your job post, running today. The code "
-             "is on my GitHub.",
+    "outro": "Semantic search, citation-grounded answers, and evals you can "
+             "trust. It runs offline. The code is on my GitHub.",
 }
 
 
@@ -221,7 +220,7 @@ def build(silent: bool):
     card(s, "gq-insight", [
         ("Semantic search + grounded answers over customer interviews", FG),
         ("an MCP server with a built-in eval harness", DIM),
-        ("Yusuf Guenena   ·   built for Great Question", BLUE),
+        ("Yusuf Guenena   ·   github.com/yusufdxb/gq-insight-mcp", BLUE),
     ], accent=BLUE)
     scenes.append((s, "intro"))
 
@@ -258,10 +257,10 @@ def build(silent: bool):
 
     # outro
     s = Scene(tmp, 4, dur("outro", 7.0))
-    card(s, "Three things from your JD", [
-        ("· semantic search across thousands of interview hours", GREEN),
-        ("· MCP tool structuring + prompt tuning", GREEN),
-        ("· evals & quality measures across MCP tools", GREEN),
+    card(s, "gq-insight", [
+        ("· semantic search over interview transcripts", GREEN),
+        ("· grounded answers, every claim cited", GREEN),
+        ("· built-in eval harness with a faithfulness gate", GREEN),
         ("", FG),
         ("github.com/yusufdxb/gq-insight-mcp", BLUE),
     ], accent=ORANGE)
