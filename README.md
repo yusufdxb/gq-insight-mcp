@@ -96,4 +96,4 @@ The interviews are synthetic but realistic, written for a fictional expense/invo
 
 ## License
 
-MIT — Yusuf Guenena
+MIT, Yusuf Guenena
